@@ -1,0 +1,5 @@
+[rtlauncher:container$] INFO Container start took 3381. Ready to accept admin requests.
+5鏈?14, 2021 7:36:15 涓嬪崍 org.hsqldb.persist.Logger logInfoEvent
+淇℃伅: Database closed
+
+

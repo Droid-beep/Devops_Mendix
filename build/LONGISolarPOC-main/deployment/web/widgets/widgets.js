@@ -1,0 +1,1 @@
+define(["BootstrapTooltip/widget/BootstrapTooltip", "BootstrapTooltip/widget/BootstrapTooltipContext", "SprintrFeedbackWidget/SprintrFeedback"], {});

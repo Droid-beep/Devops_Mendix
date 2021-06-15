@@ -1,0 +1,9 @@
+Buildfile: E:\MendixProject\LONGISolarPOC-main\deployment\build_core.xml
+
+clean:
+   [delete] Deleting directory E:\MendixProject\LONGISolarPOC-main\deployment\model
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+
+
