@@ -21,6 +21,12 @@ public class Microflows
 		IMendixObject result = (IMendixObject)Core.microflowCall("SolarPowerConversionCalculator.CalculationDashboard_CreateNew").withParams(params).execute(context);
 		return result == null ? null : solarpowerconversioncalculator.proxies.Dashboard.initialize(context, result);
 	}
+	public static solarpowerconversioncalculator.proxies.Element dS_SearchForChosen(IContext context)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		IMendixObject result = (IMendixObject)Core.microflowCall("SolarPowerConversionCalculator.DS_SearchForChosen").withParams(params).execute(context);
+		return result == null ? null : solarpowerconversioncalculator.proxies.Element.initialize(context, result);
+	}
 	public static void electrode_CreateNew(IContext context)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
@@ -49,11 +55,28 @@ public class Microflows
 		params.put("SolarCell", _solarCell == null ? null : _solarCell.getMendixObject());
 		Core.microflowCall("SolarPowerConversionCalculator.LaminatorAdd").withParams(params).execute(context);
 	}
+	public static void refresh(IContext context, solarpowerconversioncalculator.proxies.Dashboard _dashboard)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("Dashboard", _dashboard == null ? null : _dashboard.getMendixObject());
+		Core.microflowCall("SolarPowerConversionCalculator.Refresh").withParams(params).execute(context);
+	}
+	public static void resetAll(IContext context)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		Core.microflowCall("SolarPowerConversionCalculator.ResetAll").withParams(params).execute(context);
+	}
 	public static java.math.BigDecimal resultCalculation(IContext context, solarpowerconversioncalculator.proxies.Dashboard _dashboard)
 	{
 		Map<java.lang.String, Object> params = new HashMap<>();
 		params.put("Dashboard", _dashboard == null ? null : _dashboard.getMendixObject());
 		return (java.math.BigDecimal) Core.microflowCall("SolarPowerConversionCalculator.ResultCalculation").withParams(params).execute(context);
+	}
+	public static void revmove(IContext context, solarpowerconversioncalculator.proxies.Element _solarCell)
+	{
+		Map<java.lang.String, Object> params = new HashMap<>();
+		params.put("SolarCell", _solarCell == null ? null : _solarCell.getMendixObject());
+		Core.microflowCall("SolarPowerConversionCalculator.Revmove").withParams(params).execute(context);
 	}
 	public static void solarCell_CreateNew(IContext context)
 	{
